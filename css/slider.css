@@ -35,10 +35,6 @@
     transform: translate(-50%);
 }
 
-input{
-    display: none;
-}
-
 .manual-btn{
     border: 2px solid #fff;
     padding: 10px;

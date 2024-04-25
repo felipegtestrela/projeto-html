@@ -1,35 +1,18 @@
-/* nav {
+/* Estilos para a navegação */
+.menu_nav {
     background-color: #444;
     color: #fff;
     padding: 10px;
     text-align: center;
 }
 
-nav ul {
+.menu_nav_list {
     list-style-type: none;
     margin: 0;
     padding: 0;
 }
 
-nav ul li {
-    display: grid;
-    margin-right: 20px;
-} */
-
-.menu_nav{
-    background-color: #444;
-    color: #fff;
-    padding: 10px;
-    text-align: center;
-}
-
-.menu_nav_list{
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-}
-
-.menu_nav_item{
+.menu_nav_item {
     display: inline;
     margin-right: 20px;
 }
@@ -39,9 +22,15 @@ nav ul li a {
     text-decoration: none;
 }
 
+html {
+    width: 100% !important  ;
+}
+
+/* Estilos gerais */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
+    width: 100% !important;
     padding: 0;
 }
 
@@ -57,7 +46,6 @@ main,
 aside {
     display: inline-block;
     vertical-align: top;
-    width: 45%;
     padding: 30px;
     padding-bottom: 10px;
 }
@@ -73,56 +61,98 @@ aside {
     height: 110%;
     padding-top: 10px;
     padding-bottom: 10px;
-    
     color: #fff;
 }
 
-.section_space_type_1{
+.section_space_type_1 {
     background-color: #333;
 }
 
-.section_space_type_2{
-    color:#fff;
+.section_space_type_2 {
+    color: #fff;
     padding: 10px;
     background-color: blue;
 }
 
-/* .section{
-   
-} */
-
-.home_header{
-    display: flex;
-    margin-right: 20px;
-    color:#fff;
+.menu-item-aside a {
+    color: #fff;
     text-decoration: none;
 }
 
-
-/* ul li{
+.menu-item-aside {
     padding: 10px;
-} */
-
-
-.menu-item-aside a{
-    color:#fff;
-    text-decoration: none;
-    list-style-type: none;
 }
-
-.menu-item-aside{
-    padding: 10px;
-   
-}
-
-
-
 
 @media only screen and (max-width: 600px) {
-
     main,
     aside {
         display: block;
         width: 100%;
     }
+}
+
+/* Estilos para o slider */
+.slider {
+    width: 800px;
+    height: 500px;
+    overflow: hidden;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.navigation-bar {
+    display: flex;
+    position: relative;
+    bottom: 35px;
+    left: 90%;
+    transform: translate(-50%);
+}
+
+input {
+    display: none;
+}
+
+.manual-btn {
+    border: 2px solid #fff;
+    padding: 10px;
+    border-radius: 30px;
+    cursor: pointer;
+    position: relative;
+}
+
+.manual-btn:not(:last-child) {
+    margin-right: 40px;
+}
+
+.manual-btn:hover {
+    background: #fff;
+    transition: 0.4s;
+}
+
+.slides {
+    display: flex;
+    width: 400%;
+    height: 100%;
+}
+
+.slide {
+    width: 33.33%;
+    transition: 0.5s;
+}
+
+.slide img {
+    width: 100%;
+    height: 100%;
+}
+
+#radio1:checked~.first {
+    margin-left: 0;
+}
+
+#radio2:checked~.first {
+    margin-left: -33.333%;
+}
+
+#radio3:checked~.first {
+    margin-left: -66.66%;
 }
